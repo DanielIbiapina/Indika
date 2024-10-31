@@ -4,7 +4,7 @@ import Home from "./pages/home";
 import GlobalStyle from "./styles/globalStyles";
 import { theme } from "./styles/theme";
 import BottomNavigation from "./components/bottomMenu";
-// import Comunidades from "./pages/comunidades";
+import Comunidades from "./pages/comunidades";
 // import Pedidos from "./pages/pedidos";
 // import Login from "./pages/login";
 
@@ -15,7 +15,7 @@ function App() {
         <GlobalStyle />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/comunidades" element={<Comunidades />} /> */}
+          <Route path="/comunidades" element={<Comunidades />} />
           {/* <Route path="/pedidos" element={<Pedidos />} /> */}
           {/* <Route path="/entrar" element={<Login />} /> */}
         </Routes>

@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
   }
 
   html, body {
@@ -27,6 +28,18 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     color: ${(props) => props.theme.colors.text.primary};
     
+  }
+
+  .slick-slider {
+    touch-action: pan-y;
+  }
+
+  .slick-dots {
+    bottom: -25px;
+    
+    li button:before {
+      font-size: 8px;
+    }
   }
 
   button {
