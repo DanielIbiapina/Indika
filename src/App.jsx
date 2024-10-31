@@ -5,8 +5,9 @@ import GlobalStyle from "./styles/globalStyles";
 import { theme } from "./styles/theme";
 import BottomNavigation from "./components/bottomMenu";
 import Comunidades from "./pages/comunidades";
-// import Pedidos from "./pages/pedidos";
-// import Login from "./pages/login";
+import Pedidos from "./pages/pedidos";
+import Login from "./pages/login";
+import Perfil from "./pages/perfil";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/comunidades" element={<Comunidades />} />
-          {/* <Route path="/pedidos" element={<Pedidos />} /> */}
-          {/* <Route path="/entrar" element={<Login />} /> */}
+          <Route path="/pedidos" element={<Pedidos />} />
+          <Route path="/entrar" element={<Login />} />
+          <Route path="/perfil" element={<Perfil />} />
         </Routes>
         <BottomNavigation />
       </Router>
