@@ -2,6 +2,7 @@ import React from "react";
 import SearchBar from "../../components/searchBar";
 import CommunityCard from "../../components/communityCard";
 import MemberCard from "../../components/memberCard";
+import { IoAdd } from "react-icons/io5";
 import Slider from "react-slick";
 import {
   Container,
@@ -12,6 +13,7 @@ import {
   SliderWrapper,
   ProvidersGrid,
   sliderSettings,
+  AddButton,
 } from "./styles";
 
 const Comunidades = () => {
@@ -79,6 +81,10 @@ const Comunidades = () => {
         <SearchBar placeholder="Buscar comunidades..." />
       </Header>
 
+      <AddButton>
+        <IoAdd /> Criar nova comunidade
+      </AddButton>
+
       <Section>
         <SectionTitle>
           <h2>Comunidades que você participa</h2>
@@ -93,7 +99,7 @@ const Comunidades = () => {
         </SliderWrapper>
       </Section>
 
-      <Section>
+      {/*<Section>
         <SectionTitle>
           <h2>Prestadores recomendados pela sua rede</h2>
           <span>Ver todos</span>
@@ -103,7 +109,7 @@ const Comunidades = () => {
             <MemberCard key={provider.id} {...provider} />
           ))}
         </ProvidersGrid>
-      </Section>
+      </Section>*/}
 
       <Section>
         <SectionTitle>

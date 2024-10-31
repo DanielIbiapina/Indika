@@ -51,6 +51,44 @@ export const SectionTitle = styled.div`
   }
 `;
 
+export const AddButton = styled.button`
+  width: 100%;
+  background-color: #fff;
+  color: #0066ff;
+  border: 1px dashed #0066ff;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  margin: 16px 0 32px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    background-color: #f0f7ff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 102, 255, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  svg {
+    font-size: 20px;
+  }
+
+  @media (min-width: 768px) {
+    width: auto;
+    padding: 16px 32px;
+  }
+`;
+
 export const SliderWrapper = styled.div`
   margin: 0 -16px;
   padding: 0 16px;
