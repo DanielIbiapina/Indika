@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SearchBar from "../../components/searchBar";
-import { IoAdd, IoFilter } from "react-icons/io5";
+import { IoAdd, IoFilter, IoPersonCircle } from "react-icons/io5";
 import OrderCard from "../../components/orderCard";
 import {
   Container,
@@ -12,10 +12,15 @@ import {
   OrdersGrid,
   FilterButton,
   HeaderActions,
+  LoginPrompt,
+  LoginButton,
+  PromptText,
+  IllustrationWrapper,
 } from "./styles";
 
 const Pedidos = () => {
   const [activeTab, setActiveTab] = useState("active");
+  const isLoggedIn = false; // Isso viria do seu contexto de autenticação
 
   const mockActiveOrders = [
     {
@@ -59,6 +64,23 @@ const Pedidos = () => {
     },
     // ... mais pedidos concluídos
   ];
+
+  if (!isLoggedIn) {
+    return (
+      <Container>
+        <LoginPrompt>
+          <IllustrationWrapper>
+            <IoPersonCircle size={80} color="#0066ff" />
+          </IllustrationWrapper>
+          <PromptText>
+            <h2>Faça login para ver seus pedidos</h2>
+            <p>Acompanhe seus serviços e mantenha contato com os prestadores</p>
+          </PromptText>
+          <LoginButton>Entrar ou criar conta</LoginButton>
+        </LoginPrompt>
+      </Container>
+    );
+  }
 
   return (
     <Container>

@@ -14,9 +14,12 @@ import {
   ProvidersGrid,
   sliderSettings,
   AddButton,
+  LoginPrompt,
+  LoginButton,
 } from "./styles";
 
 const Comunidades = () => {
+  const isLoggedIn = false;
   const mockCommunities = [
     {
       id: 1,
@@ -124,6 +127,31 @@ const Comunidades = () => {
           </Slider>
         </SliderWrapper>
       </Section>
+
+      {/*<Section>
+        <SectionTitle>
+          <h2>Comunidades populares</h2>
+          <span>Ver todas</span>
+        </SectionTitle>
+        <SliderWrapper>
+          <Slider {...sliderSettings}>
+            {publicCommunities.map((community) => (
+              <CommunityCard
+                key={community.id}
+                {...community}
+                locked={community.private && !isLoggedIn}
+              />
+            ))}
+          </Slider>
+        </SliderWrapper>
+      </Section>*/}
+
+      {!isLoggedIn && (
+        <LoginPrompt>
+          <p>Entre para ver mais comunidades e criar as suas próprias</p>
+          <LoginButton>Entrar</LoginButton>
+        </LoginPrompt>
+      )}
     </Container>
   );
 };

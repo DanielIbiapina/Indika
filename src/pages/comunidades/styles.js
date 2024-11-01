@@ -133,3 +133,39 @@ export const sliderSettings = {
   swipeToSlide: true,
   variableWidth: true,
 };
+
+// ... outros estilos existentes ...
+
+export const LoginPrompt = styled.div`
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 32px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+`;
+
+export const LoginButton = styled.button`
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #0052cc;
+  }
+`;

@@ -70,3 +70,35 @@ export const SliderWrapper = styled.div`
     padding: 4px 0;
   }
 `;
+
+export const LoginBanner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #fff;
+  border-radius: 12px;
+  margin: 16px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+`;
+
+export const LoginButton = styled.button`
+  background-color: transparent;
+  color: #0066ff;
+  border: 1px solid #0066ff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #f0f7ff;
+  }
+`;

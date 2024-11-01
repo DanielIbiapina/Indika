@@ -14,9 +14,13 @@ import {
   SectionTitle,
   HighlightsGrid,
   SliderWrapper,
+  LoginBanner,
+  LoginButton,
 } from "./styles";
 
 const Home = () => {
+  const isLoggedIn = false; // Isso viria do seu contexto de autenticação
+
   const categories = [
     { icon: "⚙️", title: "Assistência Técnica" },
     { icon: "🔨", title: "Reformas e Reparos" },
@@ -201,6 +205,13 @@ const Home = () => {
 
   return (
     <Container>
+      {!isLoggedIn && (
+        <LoginBanner>
+          <p>Entre para ter acesso a mais serviços e comunidades</p>
+          <LoginButton>Entrar</LoginButton>
+        </LoginBanner>
+      )}
+
       <Title>Boas-vindas</Title>
       <SearchBar placeholder="O que você precisa?" />
 

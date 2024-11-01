@@ -101,3 +101,53 @@ export const FilterButton = styled.button`
     font-size: 18px;
   }
 `;
+
+export const LoginPrompt = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  min-height: 60vh;
+  text-align: center;
+  gap: 24px;
+`;
+
+export const IllustrationWrapper = styled.div`
+  background-color: #f0f7ff;
+  padding: 24px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+`;
+
+export const PromptText = styled.div`
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #666;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+`;
+
+export const LoginButton = styled.button`
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #0052cc;
+  }
+`;
